@@ -1,0 +1,45 @@
+@font-face{
+    font-family: "pixeboy";
+    src: url("../fonts/pixeboy.ttf");
+}
+
+* {
+    font-family: "pixeboy";
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: black;
+    text-align: center;
+    padding: 20;
+}
+
+header select {
+    border: 2px solid white;
+    padding: 10;
+    background: grey;
+    color:black;
+    box-shadow: 2px 2px 3px 1px black;
+}
+
+table {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+    box-shadow: 5px 5px 20px 1px black;
+}
+table th {
+    font-size: 30px;
+}
+
+main table tr td,th{
+    padding: 20px;
+    text-align: center;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+main table tr td:hover{
+    cursor:pointer;
+}
+main table tr td::selection{}
