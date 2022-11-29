@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="main container">
+        <h1 class="title">
+            Password Generator
+        </h1>
+        <div class="form-container container">
+            <form class="form form-switch">
+                <input id="password" type="text" placeholder="Generated Password..." class="form-control" disabled>
+
+                <div class="container justify-content-center input-group pass-length">
+                    <input value="8" minlength="3" class="form-control" placeholder="Minimum length (3)" type="number" id="min">
+                    <input value="8" maxlength="20" class="form-control" placeholder="Maximum length (20)" type="number" id="max">
+                </div>
+
+                <div class="container options">
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" id="numbers" checked class="form-check-input">
+                            <label for="numbers">Numbers</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" id="capitals" checked class="form-check-input">
+                            <label for="capitals">Capital Letters</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" id="symbols" checked class="form-check-input">
+                            <label for="symbols">Special Characters</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons justify-content-center">
+                    <button type="button" id="generate" class="btn btn-outline-dark">Generate Password</button>
+                    <button type="button" id="copy" class="btn btn-dark">Copy Password</button>
+                </div>
+            </form>
+        </div>
+        <div id="success">
+            <button class="btn btn-success">Copied Password</button>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
